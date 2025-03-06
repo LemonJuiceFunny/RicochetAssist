@@ -53,7 +53,7 @@ namespace RicochetAssist
                         if (dist < minDist)
                         {
                             RaycastHit rayHit;
-                            if (!Physics.Raycast(revb.transform.position, thing2fromthing1, out rayHit, Vector3.Distance(revb.transform.position, coin.transform.position) - 0.5f, coin.lmask))
+                            if (!Physics.Raycast(revb.transform.position, thing2fromthing1, out rayHit, Vector3.Distance(revb.transform.position, coin.transform.position) - 0.5f, LayerMaskDefaults.Get(LMD.Environment)))
                             {
                                 mainObject = coin.gameObject;
                                 minDist = dist;

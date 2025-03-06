@@ -10,6 +10,6 @@ namespace RicochetAssist
     {
         public const string Name = "RicochetAssist";
         public const string GUID = "ironfarm.uk.ricomorty";
-        public const string Version = "1.0.0";
+        public const string Version = "1.0.1";
     }
 }
