@@ -140,3 +140,12 @@ C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\RicochetAssis
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\RicochetAssist\RicochetAssist\bin\Debug\UnityEngine.VirtualTexturingModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\RicochetAssist\RicochetAssist\bin\Debug\netstandard.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\RicochetAssist\RicochetAssist\bin\Debug\TriInspector.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\RicochetAssist\RicochetAssist\bin\Debug\Unity.Animation.Rigging.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\RicochetAssist\RicochetAssist\bin\Debug\Unity.Animation.Rigging.DocCodeExamples.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\RicochetAssist\RicochetAssist\bin\Debug\Unity.InternalAPIEngineBridge.001.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\RicochetAssist\RicochetAssist\bin\Debug\Unity.MemoryProfiler.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\RicochetAssist\RicochetAssist\bin\Debug\Unity.Profiling.Core.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\RicochetAssist\RicochetAssist\bin\Debug\NewBlood.EngineInterop.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\RicochetAssist\RicochetAssist\bin\Debug\PrivateAPIEngineBridge.Core.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\RicochetAssist\RicochetAssist\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\RicochetAssist\RicochetAssist\bin\Debug\Bcl.CollectionsMarshal.dll
