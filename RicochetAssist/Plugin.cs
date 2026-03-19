@@ -132,8 +132,10 @@ public static class RicochetMorty
         Vector3      bestPosition = Vector3.zero;
         Vector3      pos          = ((Component)revb).transform.position;
 
-        TargetType[] types = new TargetType[5];
-        RuntimeHelpers.InitializeArray(types, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
+        TargetType[] types = new TargetType[]
+        {
+            (TargetType)0, (TargetType)1, (TargetType)2, (TargetType)3, (TargetType)4
+        };
 
         Vision vision = new Vision(pos, new VisionTypeFilter(types));
         MonoSingleton<PortalManagerV2>.Instance.TargetTracker.RegisterVision(vision, ((MonoBehaviour)revb).destroyCancellationToken);
@@ -154,7 +156,7 @@ public static class RicochetMorty
             if (coin != null && !coin.shot && !coin.shotByEnemy)
             {
                 bestTarget   = ((Component)coin).transform;
-                bestPosition = ((Matrix4x4)(ref hit.portalMatrix)).MultiplyPoint3x4(bestTarget.position);
+                bestPosition = hit.portalMatrix.MultiplyPoint3x4(bestTarget.position);
                 if (!Utils.WithinFOV(((Component)revb).transform.forward, (bestPosition - pos).normalized, ricFOV))
                     bestTarget = null;
             }
@@ -164,7 +166,7 @@ public static class RicochetMorty
         if (vision.TrySee(queryExplosive, ref hit))
         {
             bestTarget   = hit.target.GameObject.transform;
-            bestPosition = ((Matrix4x4)(ref hit.portalMatrix)).MultiplyPoint3x4(bestTarget.position);
+            bestPosition = hit.portalMatrix.MultiplyPoint3x4(bestTarget.position);
             if (!Utils.WithinFOV(((Component)revb).transform.forward, (bestPosition - pos).normalized, ricFOV))
                 bestTarget = null;
         }
@@ -179,7 +181,7 @@ public static class RicochetMorty
                 if (eid.weakPoint != null && eid.weakPoint.activeInHierarchy)
                 {
                     bestTarget   = eid.weakPoint.transform;
-                    bestPosition = ((Matrix4x4)(ref hit.portalMatrix)).MultiplyPoint3x4(bestTarget.position);
+                    bestPosition = hit.portalMatrix.MultiplyPoint3x4(bestTarget.position);
                     if (!Utils.WithinFOV(((Component)revb).transform.forward, (bestPosition - pos).normalized, ricFOV))
                         bestTarget = null;
                 }
@@ -191,7 +193,7 @@ public static class RicochetMorty
                     if (eii != null && eii.eid != null && (Object)(object)eii.eid == (Object)(object)eid)
                     {
                         bestTarget   = ((Component)eii).transform;
-                        bestPosition = ((Matrix4x4)(ref hit.portalMatrix)).MultiplyPoint3x4(bestTarget.position);
+                        bestPosition = hit.portalMatrix.MultiplyPoint3x4(bestTarget.position);
                         if (!Utils.WithinFOV(((Component)revb).transform.forward, (bestPosition - pos).normalized, ricFOV))
                             bestTarget = null;
                     }
@@ -201,7 +203,7 @@ public static class RicochetMorty
                 if (bestTarget == null)
                 {
                     bestTarget   = ((Component)eid).transform;
-                    bestPosition = ((Matrix4x4)(ref hit.portalMatrix)).MultiplyPoint3x4(bestTarget.position);
+                    bestPosition = hit.portalMatrix.MultiplyPoint3x4(bestTarget.position);
                     if (!Utils.WithinFOV(((Component)revb).transform.forward, (bestPosition - pos).normalized, ricFOV))
                         bestTarget = null;
                 }
